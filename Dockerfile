@@ -7,7 +7,7 @@
 #
 
 FROM ubuntu:14.04 
-MAINTAINER Santosh Marigowda santosharakere@gmail.com 
+MAINTAINER Srinivasa Arudra srinivas.arudra@gmail.com 
 
 # Describe the environment
 ENV JDK_VERSION 1.7.0
@@ -24,3 +24,10 @@ RUN cd /var/lib && \
   curl http://mirror.ox.ac.uk/sites/rsync.apache.org//jmeter/binaries/apache-jmeter-$JMETER_VERSION.tgz -o /var/lib/jmeter-$JMETER_VERSION.tgz && \
   tar xf jmeter-$JMETER_VERSION.tgz && \
   rm -f jmeter-$JMETER_VERSION.tgz
+
+#Install zip
+RUN sudo apt-get install zip
+
+#Install unzip
+RUN sudo apt-get install unzip
+
